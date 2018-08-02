@@ -1,0 +1,6 @@
+<p>Provides the following methods for CI/CD:</p>
+
+<dl>
+  <dt><code>checkout()</code></dt>
+  <dd>Retrieve source code and return commit SHA. Has side effect of setting <b>env.COMMIT_SHA</b>.
+</dl>
