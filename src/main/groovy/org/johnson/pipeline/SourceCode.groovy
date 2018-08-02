@@ -8,6 +8,7 @@ class SourceCode implements Serializable {
     }
 
     def checkout() {
+        script.deleteDir()
         script.env.COMMIT_SHA = script.checkout(script.scm).GIT_COMMIT
     }
 }
