@@ -11,7 +11,7 @@ node('master') {
         }
 
         stage('Compile') {
-            docker.image('gradle:slim').withRun() {
+            docker.image('gradle:slim').inside {
                 echo "GIT_SHA: ${env.COMMIT_SHA}"
                 sh 'gradle build --no-daemon'
             }
